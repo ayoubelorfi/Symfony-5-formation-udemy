@@ -2,6 +2,6 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-bonjour:
-    path: /bonjour
-    controller: App\Controller\BonjourController::index
+home:
+    path: /
+    controller: App\Controller\HomeController::index
