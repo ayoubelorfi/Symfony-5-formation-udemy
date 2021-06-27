@@ -7,6 +7,7 @@ body {
 .footer-custom {
     text-align: center;
     position: absolute;
+    bottom: 0;
     width: 100%;
     background-color:#dfeaff;
     padding-top: 14px;
@@ -33,3 +34,20 @@ body {
 }
 .product-page-price {
     font-size: 19px;
+}
+
+.positionnormal {
+    position: inherit !important;
+}
+.positionfixed {
+    position: fixed !important;
+}
+.cart-icone{
+    height: 20px;
+    padding-left: 20px;
+}
+.quantity-card {
+    color: black;
+    font-size: 15px;
+    padding: 0 4px;
+}

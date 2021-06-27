@@ -36,7 +36,6 @@ class ProductController extends AbstractController
         }
         // $string = $request->query->get('string');
         // $categories = $request->query->get('categories');
-
         
         return $this->render('product/index.html.twig', [
             'products' => $products,'form' => $form->createView()

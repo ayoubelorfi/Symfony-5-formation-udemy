@@ -9,8 +9,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('assets/lib/fontawesome-free-5.15.3-web/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> 
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -55,6 +55,8 @@
                 {% else %}
                     <a href="{{ path('app_login')}}"  >Connexion</a> | <a href="{{ path('inscription')}}"  >Inscription</a>
                 {% endif %}
+                    <a href="{{ path('cart')}}"  ><img class="cart-icone" src="/assets/images/shopping-cart.png" alt="mon panier" ></a>
+
             </div>
         </div>
     </nav>
@@ -121,11 +123,15 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
-    <footer class="footer-custom">
-        <p>&copy; 2017-2021 Boutique Project <br>  &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
+    
 </main>
+<footer class="footer-custom positionfixed py-2">
+    <p class="mb-0">&copy; 2017-2021 Boutique Project <br>  &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('assets/lib/fontawesome-free-5.15.3-web/js/all.min.js') }}"></script>
+
 </body>
 </html>
