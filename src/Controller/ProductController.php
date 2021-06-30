@@ -52,7 +52,7 @@ class ProductController extends AbstractController
 
         if(!$product)
         {
-            return $this->redirect('products');
+            return $this->redirectToRoute('products');
         }
         
         return $this->render('product/show.html.twig', [

@@ -48,7 +48,7 @@
         <b> Nombre de produit :</b>  {{ nbproducts }}<br>
         <b> Total de mon panier : {{ ( totalpanier / 100 )|number_format(2,',','.')  }} €  </b> <br>
         <hr>
-        <a class="btn btn-success "><i class="fas fa-check" ></i> Valider mon panier </a>
+        <a href="{{ path('order') }}" class="btn btn-success "><i class="fas fa-check" ></i> Valider mon panier </a>
         <a href="{{ path('remove_cart') }}" class="btn btn-danger "><i class="fas fa-trash" ></i> Supprimer tout mon panier </a>
         <hr>
         

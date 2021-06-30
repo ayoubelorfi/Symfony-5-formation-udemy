@@ -11,6 +11,7 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/lib/fontawesome-free-5.15.3-web/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> 
+    
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -132,6 +133,7 @@
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 <script src="{{ asset('assets/lib/fontawesome-free-5.15.3-web/js/all.min.js') }}"></script>
-
+{% block javascript %}
+{% endblock %}
 </body>
 </html>
