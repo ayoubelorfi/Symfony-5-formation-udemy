@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Classe\Cart;
 use App\Entity\Order;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,11 +28,10 @@ class OrderSuccessController extends AbstractController
         if(!$order || $order->getUser() != $this->getUser() )
             return $this->redirectToRoute('home');
 
-        if(!$order->getIsPaid){
+        if(!$order->getIsPaid()){
             $order->setIsPaid(1);
             $this->entityManager->flush();
             $cart->remove();
-
         }
         
         return $this->render('order_success/index.html.twig', [

@@ -11,13 +11,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use cebe\markdown\Markdown;
+use App\Helpers\MarkdownHelper;
 
 class OrderController extends AbstractController
 {
     private $entityManager;
+    private $helper;
 
-    public function __construct(EntityManagerInterface $entityManager )
+    public function __construct(EntityManagerInterface $entityManager, MarkdownHelper $helper )
     {
+        $this->helper = $helper;
         $this->entityManager = $entityManager;
     }
     
@@ -67,7 +71,8 @@ class OrderController extends AbstractController
 
             // ajouter commande : order 
             $order = new Order();
-            $reference = $date->format('dmY').'-'.uniqid();
+            $reference = $this->helper->makeReference(); 
+
             $order->setReference($reference);
             $order->setUser($this->getUser());
             $order->setCreatedAt($date);
