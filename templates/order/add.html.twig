@@ -3,9 +3,12 @@
 {% block title %}Paiement de ma commande - Boutique Project{% endblock %}
 
 {% block content %}
-    <h2>Mon rec</h2>
+    <h2>Mon recapitulatif de paiement</h2>
     <p> Vériviez vos informations avant de payer votre commande </p>
-    <hr>
+    <hr> 
+    {% for message in app.flashes("success") %}
+        <p style="color:green;">{{ message }}</p>
+    {% endfor %}
     <div class="row">
         <div class="col-md-6">
             <b>Mon adresse de livraison</b><br>

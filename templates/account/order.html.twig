@@ -21,7 +21,7 @@
                         <tr>
                         <td><span class="badge badge-secondary" >{{ item.reference }}</span></td>
                         <td>{{ item.orderDetails|length }}</td>
-                        <th scope="row">{{ item.createdAt|date('d/mY') }}</th>
+                        <th scope="row">{{ item.createdAt|date('d/m/Y') }}</th>
                         <td>{{ ( (item.getTotal + item.carrierPrice) / 100 )|number_format(2,',','.')  }} € </td>
                         <td><a href="{{ path('account_order_show',{'reference': item.reference}) }}" title="voir ma commande" clas="btn-info btn btn-sm"><i class="fa-2x fas fa-eye" ></i></a></td>
                         </tr>
